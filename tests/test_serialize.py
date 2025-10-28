@@ -1,5 +1,6 @@
 import os, sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
+# This line is now corrected to import from 'serialize'
 from serialize import Node, serialize, deserialize
 
 # normal (4)
@@ -54,3 +55,4 @@ def test_random_tokens_stability():
 
 def test_multiple_hashes():
     assert serialize(deserialize('# # #')) == '#'
+
